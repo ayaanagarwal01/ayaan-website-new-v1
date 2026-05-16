@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { socialMediaHandles } from '../data/mockData';
 import ContactFooter from '../components/ContactFooter';
-import { ArrowLeft, Users, MessageCircle, Youtube, Instagram, Linkedin, Twitter, Mail, ExternalLink, Star, Bell } from 'lucide-react';
+import { ArrowLeft, Users, MessageCircle, Youtube, Instagram, Linkedin, Twitter, ExternalLink, Star, Bell } from 'lucide-react';
 
 const platformIcons = {
   whatsapp: MessageCircle,
@@ -10,7 +10,6 @@ const platformIcons = {
   instagram: Instagram,
   linkedin: Linkedin,
   twitter: Twitter,
-  email: Mail,
 };
 
 const iconColors = {
@@ -19,7 +18,6 @@ const iconColors = {
   instagram: 'text-pink-400',
   linkedin: 'text-blue-400',
   twitter: 'text-sky-400',
-  email: 'text-amber-400',
 };
 
 const bgColors = {
@@ -28,7 +26,6 @@ const bgColors = {
   instagram: 'bg-pink-500/10',
   linkedin: 'bg-blue-500/10',
   twitter: 'bg-sky-500/10',
-  email: 'bg-amber-500/10',
 };
 
 const CommunityPage = () => {

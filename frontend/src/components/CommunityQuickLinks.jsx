@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { socialMediaHandles } from '../data/mockData';
-import { Users, MessageCircle, Youtube, Instagram, Linkedin, Twitter, Mail, ArrowRight, ExternalLink } from 'lucide-react';
+import { Users, MessageCircle, Youtube, Instagram, Linkedin, Twitter, ArrowRight, ExternalLink } from 'lucide-react';
 
 const platformIcons = {
   whatsapp: MessageCircle,
@@ -9,7 +9,6 @@ const platformIcons = {
   instagram: Instagram,
   linkedin: Linkedin,
   twitter: Twitter,
-  email: Mail,
 };
 
 const platformColors = {
@@ -18,7 +17,6 @@ const platformColors = {
   instagram: 'from-pink-500/10 to-purple-600/5 border-pink-500/15 hover:border-pink-500/30',
   linkedin: 'from-blue-500/10 to-blue-600/5 border-blue-500/15 hover:border-blue-500/30',
   twitter: 'from-sky-500/10 to-sky-600/5 border-sky-500/15 hover:border-sky-500/30',
-  email: 'from-amber-500/10 to-amber-600/5 border-amber-500/15 hover:border-amber-500/30',
 };
 
 const iconColors = {
@@ -27,7 +25,6 @@ const iconColors = {
   instagram: 'text-pink-400',
   linkedin: 'text-blue-400',
   twitter: 'text-sky-400',
-  email: 'text-amber-400',
 };
 
 const CommunityQuickLinks = () => {

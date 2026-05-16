@@ -1,6 +1,6 @@
 import React from 'react';
 import { contactInfo } from '../data/mockData';
-import { Mail, MapPin, Globe, ArrowUp } from 'lucide-react';
+import { Mail, Globe, ArrowUp } from 'lucide-react';
 
 const ContactFooter = () => {
   const scrollToTop = () => {
@@ -13,7 +13,7 @@ const ContactFooter = () => {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-10 mb-20">
+        <div className="grid md:grid-cols-2 gap-10 mb-20 max-w-3xl">
           {/* Email */}
           <div className="group">
             <div className="flex items-center gap-3 mb-5">
@@ -28,17 +28,6 @@ const ContactFooter = () => {
             >
               {contactInfo.email}
             </a>
-          </div>
-
-          {/* Address */}
-          <div className="group">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 rounded-lg bg-amber-500/10 flex items-center justify-center group-hover:bg-amber-500/15 transition-colors duration-300">
-                <MapPin size={16} className="text-amber-400" />
-              </div>
-              <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Street Address</h4>
-            </div>
-            <p className="text-white text-base font-medium">{contactInfo.address}</p>
           </div>
 
           {/* Website */}

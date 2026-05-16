@@ -23,6 +23,7 @@ export const navItems = [
   { label: 'Debate', href: '#debate' },
   { label: 'My Community', href: '/community' },
   { label: 'Social Awareness', href: '#social-awareness' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 export const servicesData = [
@@ -226,7 +227,6 @@ export const debateAchievements = [
 
 export const contactInfo = {
   email: 'ayaanagarwal209@gmail.com',
-  address: 'Mumbai, India',
   website: 'www.ayaanportfolio.com',
 };
 
@@ -290,15 +290,6 @@ export const socialMediaHandles = [
     isHighlight: false,
     followers: '350+',
   },
-  {
-    id: 'email',
-    platform: 'Email Newsletter',
-    handle: 'ayaanagarwal209@gmail.com',
-    url: 'mailto:ayaanagarwal209@gmail.com',
-    description: 'Subscribe to receive updates directly in your inbox.',
-    isHighlight: false,
-    followers: '',
-  },
 ];
 
 export const socialAwarenessData = {
@@ -315,3 +306,97 @@ export const socialAwarenessData = {
     'Science Communication',
   ],
 };
+
+
+export const blogPosts = [
+  {
+    id: 'how-hamilton-changed-my-life',
+    title: 'How Hamilton Changed My Life at 13',
+    date: 'March 15, 2025',
+    category: 'Theatre',
+    readTime: '5 min read',
+    excerpt: 'The first time I watched Hamilton, something inside me shifted. I walked out of that theatre not just entertained, but transformed. Here is the story of how a Broadway musical set me on a path I never expected.',
+    content: `The first time I watched Hamilton, something inside me shifted. I was 13, sitting in a dimly lit theatre, and as Lin-Manuel Miranda's words filled the room, I felt a fire ignite within me that I didn't know existed.\n\nI'd always been curious about the arts, but Hamilton was different. It wasn't just a show — it was a revolution wrapped in rhythm. The way it blended history with hip-hop, the way it made centuries-old stories feel alive and urgent — it spoke to me in a language I didn't know I understood.\n\nThat night, I went home and couldn't sleep. I kept replaying the songs in my head, mouthing the words to "My Shot" and "Wait For It." But more than the music, it was the idea that stories could be told in entirely new ways that captivated me.\n\nWithin weeks, I was auditioning for my school's drama club. Within months, I was cast in my first musical — "If You Were Me." The nervous energy before stepping on stage for the first time is something I'll never forget. My hands were shaking, my heart was racing, but the moment the lights hit and the music started, everything else disappeared.\n\nSince then, I've done two full productions, played characters that challenged me emotionally and physically, and discovered that performing isn't just about entertainment — it's about empathy. Every character you play teaches you to see the world through someone else's eyes.\n\nLooking back, I'm grateful for that 13-year-old who sat wide-eyed in a theatre seat. Hamilton didn't just introduce me to musical theatre; it taught me that passion can come from the most unexpected places, and that the stories we choose to tell have the power to change lives — starting with our own.`,
+  },
+  {
+    id: 'from-petri-dishes-to-python',
+    title: 'From Petri Dishes to Python: My Research Journey',
+    date: 'February 28, 2025',
+    category: 'Research',
+    readTime: '7 min read',
+    excerpt: 'My path into computational biology wasn\'t linear. It started with a fascination for microorganisms and evolved into a love for data-driven discovery. This is the story of how I bridged two very different worlds.',
+    content: `If you told me three years ago that I'd be writing machine learning algorithms to analyze B cell repertoires, I would have laughed. Back then, I was the kid who loved looking at bacteria under microscopes and thought "coding" was something only tech prodigies did.\n\nMy research journey started with a simple question: how do our bodies fight disease? This curiosity led me to microbiology, where I spent hours learning about immune responses, cellular mechanisms, and the elegant complexity of biological systems.\n\nBut as I dug deeper, I realized that modern biology generates mountains of data — genomic sequences, protein structures, expression profiles — far more than any human could analyze manually. That's when I stumbled into computational biology.\n\nLearning to code was humbling. I went from being comfortable in a wet lab to being a complete beginner staring at Python tutorials. The first time I wrote a script that actually worked — a simple data parser for RNA sequences — I felt the same rush I felt on stage during a performance.\n\nMy first major project at TIFR was a turning point. Working on RNA-seq meta-analysis, I learned to combine computational tools with biological intuition. The datasets were massive, the analysis was complex, but the feeling of uncovering conserved metabolic pathways that others had missed was indescribable.\n\nThe machine learning project on Multiple Sclerosis took things further. Training models to identify shared B cell repertoires across patients felt like teaching a computer to think like an immunologist. When our meta-analysis revealed patterns that traditional methods had overlooked, I understood the true power of interdisciplinary thinking.\n\nWhat I've learned is that the best discoveries happen at intersections — between biology and computer science, between curiosity and methodology, between asking "why" and figuring out "how." My research journey is far from over, but these early experiences have shown me that the most exciting questions in science today require us to think across boundaries.`,
+  },
+  {
+    id: 'the-art-of-losing-a-debate',
+    title: 'The Art of Losing a Debate (And Why It Matters)',
+    date: 'February 10, 2025',
+    category: 'Debate',
+    readTime: '4 min read',
+    excerpt: 'Everyone talks about winning. But some of my most valuable lessons came from debates I lost. Here is why failure on the debate floor made me a better thinker and communicator.',
+    content: `I remember my first debate loss vividly. I had prepared for days, rehearsed my arguments until they were sharp, and walked into the room confident I'd win. I didn't.\n\nThe opposing team dismantled my case point by point. They found gaps in my logic I hadn't seen, raised counterarguments I hadn't considered, and delivered their rebuttal with a calm precision that left me speechless — literally.\n\nI walked out of that room feeling defeated. But looking back, that loss was one of the best things that happened to me.\n\nLosing a debate forces you to confront uncomfortable truths. It shows you where your thinking is lazy, where your assumptions are unfounded, and where your communication falls flat. Winning can make you complacent; losing makes you evolve.\n\nAfter that first loss, I changed my preparation entirely. Instead of just building my own case, I started rigorously attacking it from every angle. I'd spend hours thinking about what my opponents might say, stress-testing my arguments, and preparing for the unexpected.\n\nThis approach didn't just make me a better debater — it made me a better researcher, a better student, and a better person. The ability to consider multiple perspectives, to hold two opposing ideas in your mind simultaneously, and to change your position when the evidence demands it — these are skills that debate taught me, and they came not from my victories, but from my defeats.\n\nBy the time I won the World Schools Debating League and the Oliphant Memorial Debate, I carried those early losses with me as reminders: every setback is a setup for growth.`,
+  },
+  {
+    id: 'finding-my-voice-literally',
+    title: 'Finding My Voice — Literally',
+    date: 'January 22, 2025',
+    category: 'Music',
+    readTime: '5 min read',
+    excerpt: 'From singing in the shower to performing Hotel California with a live band — here is how music became my most personal form of expression.',
+    content: `I've always loved music. As a kid, I'd sing along to every song on the radio, much to my family's amusement (and sometimes annoyance). But I never thought of myself as a "singer." That label felt reserved for people with natural talent, formal training, and perfect pitch.\n\nThe shift happened gradually. A friend heard me humming in the hallway and said, "You should actually sing that properly." So I did — at a small school talent show, trembling from head to toe, performing "Waving Through a Window" from Dear Evan Hansen.\n\nThe response surprised me. People actually liked it. More importantly, I liked how it felt. There's something about singing that strips away all pretense. Unlike debate or research, where you can hide behind logic and data, singing requires vulnerability. Your voice is you — raw and unfiltered.\n\nForming a band was the next natural step. Finding bandmates who shared my energy, rehearsing in cramped rooms, arguing about setlists — it was chaotic and wonderful. Our first gig was a mess technically, but the audience didn't care, and neither did we. We were making music together, and that was enough.\n\nPerforming classics like Hey Jude, Hotel California, and Thriller with my band taught me something important: music is a conversation. Between you and the audience, between you and your bandmates, between the melody and the emotion behind it.\n\nToday, music is my anchor. When research gets overwhelming or debate prep gets exhausting, I pick up a mic and let the music take over. It's not about being perfect — it's about being present.`,
+  },
+  {
+    id: 'what-service-yatra-taught-me',
+    title: 'What Service Yatra Taught Me About Privilege',
+    date: 'January 5, 2025',
+    category: 'Service',
+    readTime: '6 min read',
+    excerpt: 'Traveling to rural Goa for community service wasn\'t just about giving back — it was about waking up to realities I had been blind to. This experience fundamentally changed how I see the world.',
+    content: `When I signed up for the Service Yatra to Goa, I thought I was going to help people. What I didn't expect was how much they would help me.\n\nGrowing up in Mumbai, I lived in a bubble. A comfortable one — good schools, access to technology, opportunities at every turn. The Service Yatra burst that bubble in the most necessary way.\n\nWe spent time in rural communities where children walked miles to reach a school that had no electricity. Where families relied on rainwater because clean water infrastructure didn't exist. Where the concept of "choosing a career" was a luxury most couldn't afford.\n\nBut here's what struck me most: despite these challenges, the people we met were not defined by what they lacked. They were resourceful, resilient, and remarkably generous. They shared their food with us, their stories, their laughter. A woman who had very little insisted on making us tea because "guests are a blessing."\n\nThis experience forced me to reckon with my own privilege in ways that no book or lecture ever could. I realized that the opportunities I had — the research, the music, the debate competitions — weren't just achievements. They were the result of circumstances that millions of people in my own country didn't share.\n\nSince the Yatra, I've tried to channel this awareness into action. Whether it's through YLAC, where I engaged with policy and civic leadership, or my ApniShala internship focused on social-emotional learning, I've committed to using my skills and platforms to democratize access — to education, to information, to opportunity.\n\nService isn't charity. It's a two-way street where you give what you can and receive perspectives that money can't buy.`,
+  },
+  {
+    id: 'playing-haji-theatre-empathy',
+    title: 'Playing Haji: What Theatre Taught Me About Empathy',
+    date: 'December 18, 2024',
+    category: 'Theatre',
+    readTime: '5 min read',
+    excerpt: 'Embodying a character whose life was nothing like mine forced me to understand emotions and experiences far beyond my own. Theatre is empathy in action.',
+    content: `When I was cast as Haji in "If You Were Me," I had no idea what I was signing up for. The character was complex, emotionally heavy, and nothing like anyone I'd ever been.\n\nThe rehearsal process was intense. Our director pushed us to go beyond just learning lines — we had to understand the world our characters lived in, their fears, their desires, their contradictions. For Haji, this meant spending weeks researching, reflecting, and sitting with uncomfortable emotions.\n\nThere's a scene — Haji's death — that required me to be completely present in a moment of profound loss. The first few times I rehearsed it, I felt nothing. I was performing grief, not feeling it. My director told me something I'll never forget: "Don't act sad. Find what Haji would lose. Then lose it."\n\nThat note changed everything. I stopped thinking about how to look sad and started thinking about what this character had lived for. The people he loved. The dreams he had. And suddenly, the emotion wasn't something I had to conjure — it was there, real and raw.\n\nPerforming that scene on opening night was one of the most powerful experiences of my life. The audience was silent. I could feel the weight of the moment hanging in the air. And in that silence, I understood something fundamental about theatre: it doesn't work unless you're willing to be truly vulnerable.\n\nTheatre has taught me more about empathy than any course ever could. When you spend months living inside someone else's story, you can't help but become more compassionate. You start listening differently, observing more carefully, and assuming less about the people around you.\n\nThat's the real magic of performance — it doesn't just change the audience. It changes you.`,
+  },
+  {
+    id: 'why-i-believe-in-interdisciplinary-thinking',
+    title: 'Why I Believe in Interdisciplinary Thinking',
+    date: 'December 2, 2024',
+    category: 'Reflections',
+    readTime: '4 min read',
+    excerpt: 'Research, theatre, debate, music, service — people often ask how I juggle so many interests. The truth is, they are not separate. They feed each other in ways I never expected.',
+    content: `"So what are you — a scientist or an artist?" I get this question more than I'd like. The assumption behind it is that you have to pick a lane. That research and theatre exist on opposite ends of some spectrum, and pursuing both means you're not serious about either.\n\nI couldn't disagree more.\n\nMy experience has shown me that the skills I develop in one domain directly enhance my work in another. Debate taught me to structure arguments clearly — which makes my research papers stronger. Theatre taught me to communicate with emotion — which makes my research presentations more compelling. Music taught me about rhythm and timing — which, believe it or not, helps me pace a debate speech.\n\nAnd research? The analytical thinking, the attention to detail, the patience required to work through complex problems — all of these make me a more thoughtful performer and a more rigorous debater.\n\nThe world's most interesting people have always been polymaths. Leonardo da Vinci was a painter and an engineer. Richard Feynman was a physicist and a bongo player. Ada Lovelace combined mathematics with imagination to envision computing.\n\nI'm not comparing myself to these giants, but I do share their conviction that curiosity shouldn't be confined to a single box. The most creative solutions, the most impactful performances, and the most meaningful service come from people who draw on diverse experiences.\n\nSo no, I'm not just a scientist or just an artist. I'm someone who believes that the most interesting version of yourself exists at the intersection of everything you love.`,
+  },
+  {
+    id: 'my-first-research-paper',
+    title: 'Publishing My First Research Paper: A Behind-the-Scenes Look',
+    date: 'November 15, 2024',
+    category: 'Research',
+    readTime: '6 min read',
+    excerpt: 'The journey from hypothesis to publication was far messier and more rewarding than I imagined. Here is what they don\'t tell you about writing your first research paper.',
+    content: `Nobody tells you that writing a research paper is 10% eureka moments and 90% staring at your screen wondering if any of this makes sense.\n\nWhen I started my machine learning project on B cell repertoires in Multiple Sclerosis, I was excited about the science. What I wasn't prepared for was the writing. Turning months of analysis, failed experiments, and iterative model training into a coherent narrative was arguably harder than the research itself.\n\nThe first draft was terrible. I mean genuinely, embarrassingly bad. I had buried the most important findings in paragraph six, used jargon that even I had to look up twice, and somehow managed to make a fascinating topic sound boring. My mentor read it and, with admirable diplomacy, suggested I "restructure significantly."\n\nDraft two was better. Draft five was decent. Draft eleven was finally something I was proud of.\n\nHere's what I learned through this process:\n\nFirst, writing is thinking. When you can't explain something clearly on paper, it usually means you don't understand it well enough yet. The act of writing forced me to clarify my own thinking in ways that coding and analysis never did.\n\nSecond, feedback is a gift, even when it stings. Every round of revisions from my mentors made the paper stronger. Learning to separate my ego from my work was crucial.\n\nThird, the graphical abstract matters more than you think. A compelling visual summary of your findings can be the difference between someone reading your paper and scrolling past it.\n\nWhen the paper was finally ready for submission, I felt a mix of pride and terror. Putting your intellectual work out into the world for scrutiny is nerve-wracking. But it's also the whole point of research — to contribute to the collective understanding.\n\nTo any young researcher reading this: your first paper will be messy. Embrace the mess. That's where the learning happens.`,
+  },
+  {
+    id: 'lessons-from-apnishala',
+    title: 'Lessons from ApniShala: Why Social-Emotional Learning Matters',
+    date: 'October 28, 2024',
+    category: 'Service',
+    readTime: '5 min read',
+    excerpt: 'My internship at ApniShala opened my eyes to the gap in our education system — we teach students to solve equations but not to understand their own emotions.',
+    content: `During my internship at ApniShala, I worked with students who could solve complex math problems but couldn't articulate why they felt anxious before exams. They could recite historical dates but struggled to resolve conflicts with their peers. This disconnect revealed something fundamental about our education system: we're producing knowledgeable students but not necessarily emotionally intelligent ones.\n\nApniShala's approach to social-emotional learning (SEL) was eye-opening. Instead of treating emotions as distractions from "real" learning, they integrated emotional awareness into the educational experience. Students learned to identify their feelings, communicate them effectively, and develop strategies for managing stress, frustration, and interpersonal challenges.\n\nOne activity that stayed with me was the "emotion check-in" at the start of each session. Students would share how they were feeling using a simple scale, and the facilitator would acknowledge each response without judgment. It sounds basic, but for many of these kids, it was the first time an adult in an educational setting had asked them how they felt — and actually listened.\n\nI noticed real changes over the course of my internship. Students who had been disruptive became more self-aware. Kids who had been silent started speaking up. The classroom dynamic shifted from competitive to collaborative.\n\nThis experience reinforced my belief that education should be holistic. Academic achievement matters, but so does emotional resilience, self-awareness, and the ability to connect with others. These aren't "soft" skills — they're foundational skills that determine how effectively we navigate every aspect of life.\n\nApniShala showed me that when we invest in the emotional development of young people, the academic results follow naturally. The question isn't whether we can afford to include SEL in our schools — it's whether we can afford not to.`,
+  },
+  {
+    id: 'building-a-band-from-scratch',
+    title: 'Building a Band from Scratch: Chaos, Chemistry, and Music',
+    date: 'October 10, 2024',
+    category: 'Music',
+    readTime: '5 min read',
+    excerpt: 'Starting a band sounds romantic until you\'re arguing about song keys in a tiny room at 10 PM. But those messy moments are exactly what make the music real.',
+    content: `The idea to start a band came from a place of frustration. I loved performing solo, but there was a ceiling to what one voice could do. I wanted layers — drums, guitar, bass, the works. I wanted to feel the music not just in my throat but in my chest.\n\nFinding bandmates was the first challenge. You'd think a school full of musically inclined students would make this easy. It did not. The guitarist wanted to play only metal. The drummer had scheduling conflicts. The bassist wasn't sure he wanted to commit. After weeks of negotiations that felt more like diplomacy than music, we finally had a lineup.\n\nOur first rehearsal was a disaster in the most beautiful way. Nobody was in sync. The tempo was off. I was singing in one key while the guitarist was firmly in another. But somewhere in that chaos, there were moments — brief, electric moments — where everything clicked. Where the rhythm locked in and the melody soared and we all looked at each other with the same expression: "Did you feel that?"\n\nThose moments kept us going through the rough patches. And there were many. Arguments about setlists. Disagreements about arrangements. The eternal debate over whether we should cover Thriller (we did, and it was worth every argument).\n\nOur first public performance was at a school event. We were nervous, underprepared, and slightly terrified. But when we hit the opening chords of Hotel California and the crowd started nodding along, none of that mattered. We were a band. We were making music. And the imperfections — the slightly off-beat drum fill, the guitar solo that went one bar too long — made it feel alive and authentic.\n\nStarting a band taught me about collaboration in a way nothing else has. In research, you can work in parallel. In debate, you take turns. But in a band, you have to be in sync — literally. You have to listen more than you play, adjust in real-time, and trust that your bandmates will catch you when you stumble.\n\nThat's a lesson that extends far beyond music.`,
+  },
+];
