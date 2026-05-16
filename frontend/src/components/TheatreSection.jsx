@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { theatreShows } from '../data/mockData';
+import SectionBanner from './SectionBanner';
 import { Drama, ArrowUpRight } from 'lucide-react';
 
 const TheatreSection = () => {
@@ -22,6 +23,8 @@ const TheatreSection = () => {
           </div>
           <div className="hidden sm:block h-px flex-1 bg-gradient-to-r from-purple-500/15 to-transparent mb-3" />
         </div>
+
+        <SectionBanner accent="purple" caption="Under the lights — every performance is a chance to tell a story that matters." />
 
         <div className="grid md:grid-cols-2 gap-6">
           {theatreShows.map((show) => (

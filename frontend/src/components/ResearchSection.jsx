@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { researchProjects } from '../data/mockData';
+import SectionBanner from './SectionBanner';
 import { ArrowUpRight, Beaker } from 'lucide-react';
 
 const ResearchSection = () => {
@@ -22,6 +23,8 @@ const ResearchSection = () => {
           </div>
           <div className="hidden sm:block h-px flex-1 bg-gradient-to-r from-blue-500/15 to-transparent mb-3" />
         </div>
+
+        <SectionBanner accent="blue" caption="From the stage to the lab — pursuing science with the same intensity I bring to performance." />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {researchProjects.map((project) => (
