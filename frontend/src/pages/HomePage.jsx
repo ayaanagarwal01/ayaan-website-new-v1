@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
+import KeyHighlightsSection from '../components/KeyHighlightsSection';
 import ServicesCarousel from '../components/ServicesCarousel';
 import ResearchSection from '../components/ResearchSection';
 import TheatreSection from '../components/TheatreSection';
@@ -14,6 +15,7 @@ const HomePage = () => {
   return (
     <main>
       <HeroSection />
+      <KeyHighlightsSection />
       <ServicesCarousel />
       <ResearchSection />
       <TheatreSection />
