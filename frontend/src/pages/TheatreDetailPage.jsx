@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { theatreShows } from '../data/mockData';
 import ContactFooter from '../components/ContactFooter';
-import { ArrowLeft, Play, X, Image } from 'lucide-react';
+import { ArrowLeft, Play, X, Images } from 'lucide-react';
 
 const TheatreDetailPage = () => {
   const { id } = useParams();
@@ -26,90 +26,98 @@ const TheatreDetailPage = () => {
   return (
     <main className="bg-zinc-900 min-h-screen">
       {/* Hero */}
-      <section className="relative pt-28 pb-16 bg-zinc-800">
-        <div className="absolute inset-0 opacity-5">
+      <section className="relative pt-28 pb-20 bg-zinc-800 overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]">
           <div
             className="absolute inset-0"
             style={{
               backgroundImage:
-                'radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 1px, transparent 1px)',
-              backgroundSize: '60px 60px',
+                'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 1px, transparent 1px)',
+              backgroundSize: '50px 50px',
             }}
           />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-[120px]" />
+
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors duration-300 mb-8"
+            className="inline-flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors duration-300 mb-10 group"
           >
-            <ArrowLeft size={18} />
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform duration-300" />
             <span className="text-sm font-medium">Back to Home</span>
           </Link>
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6">
-            <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-            <span className="text-amber-400 text-sm font-medium">Theatre</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/10 border border-amber-500/15 rounded-full mb-6">
+            <span className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse" />
+            <span className="text-amber-400 text-xs font-semibold tracking-wider uppercase">Theatre</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight max-w-4xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.15] max-w-4xl tracking-tight">
             {show.title}
           </h1>
+          <p className="mt-4 text-gray-500 text-sm">
+            {show.videos.length} performance{show.videos.length !== 1 ? 's' : ''} &middot; {show.gallery.length} photos
+          </p>
         </div>
       </section>
 
       {/* Content */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Gallery */}
-          {show.gallery.length > 0 && (
-            <div className="mb-16">
-              <div className="flex items-center gap-3 mb-8">
-                <Image size={24} className="text-amber-400" />
-                <h2 className="text-2xl font-bold text-white">Gallery</h2>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {show.gallery.map((img, index) => (
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+
+          {/* Performances / Videos */}
+          {show.videos.length > 0 && (
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-8">Performances</h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {show.videos.map((video) => (
                   <div
-                    key={index}
-                    className="group relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-800 border border-zinc-700/50 hover:border-amber-500/30 cursor-pointer transition-all duration-300"
-                    onClick={() => setLightboxImage(img)}
+                    key={video.id}
+                    className="group relative aspect-video rounded-2xl overflow-hidden bg-zinc-800 border border-zinc-700/30 hover:border-zinc-600/50 cursor-pointer transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_15px_40px_-10px_rgba(0,0,0,0.5)]"
+                    onClick={() => setActiveVideo(video)}
                   >
                     <img
-                      src={img}
-                      alt={`Gallery ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                      alt={video.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                    <div className="absolute inset-0 bg-black/35 group-hover:bg-black/20 transition-colors duration-500 flex items-center justify-center">
+                      <div className="w-14 h-14 rounded-full bg-red-600/90 backdrop-blur-sm flex items-center justify-center shadow-xl shadow-red-900/40 group-hover:scale-110 transition-transform duration-500">
+                        <Play size={22} className="text-white ml-0.5" fill="white" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <h3 className="text-white font-semibold text-sm drop-shadow-lg">{video.title}</h3>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           )}
 
-          {/* Videos */}
-          {show.videos.length > 0 && (
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-8">Performances</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {show.videos.map((video) => (
+          {/* Gallery */}
+          {show.gallery.length > 0 && (
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                  <Images size={18} className="text-amber-400" />
+                </div>
+                <h2 className="text-2xl font-bold text-white">Gallery</h2>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                {show.gallery.map((img, index) => (
                   <div
-                    key={video.id}
-                    className="group relative aspect-video rounded-2xl overflow-hidden bg-zinc-800 border border-zinc-700/50 hover:border-amber-500/30 cursor-pointer transition-all duration-300"
-                    onClick={() => setActiveVideo(video)}
+                    key={index}
+                    className="group relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-800 border border-zinc-700/30 hover:border-amber-500/20 cursor-pointer transition-all duration-500"
+                    onClick={() => setLightboxImage(img)}
                   >
                     <img
-                      src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                      alt={video.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      src={img}
+                      alt={`Gallery ${index + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center shadow-lg shadow-red-900/50 group-hover:scale-110 transition-transform duration-300">
-                        <Play size={28} className="text-white ml-1" fill="white" />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-white font-semibold text-lg">{video.title}</h3>
-                    </div>
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
                   </div>
                 ))}
               </div>
@@ -121,17 +129,17 @@ const TheatreDetailPage = () => {
       {/* Video Modal */}
       {activeVideo && (
         <div
-          className="fixed inset-0 z-[70] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          className="fixed inset-0 z-[70] bg-black/95 backdrop-blur-md flex items-center justify-center p-4"
           onClick={() => setActiveVideo(null)}
         >
-          <div className="relative w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setActiveVideo(null)}
-              className="absolute -top-12 right-0 p-2 text-gray-400 hover:text-white transition-colors"
+              className="absolute -top-14 right-0 p-2.5 rounded-full bg-zinc-800/80 text-gray-400 hover:text-white hover:bg-zinc-700 transition-all duration-300"
             >
-              <X size={24} />
+              <X size={22} />
             </button>
-            <div className="aspect-video rounded-2xl overflow-hidden bg-zinc-900">
+            <div className="aspect-video rounded-2xl overflow-hidden bg-zinc-900 shadow-2xl">
               <iframe
                 src={`https://www.youtube.com/embed/${activeVideo.id}?autoplay=1`}
                 title={activeVideo.title}
@@ -140,7 +148,7 @@ const TheatreDetailPage = () => {
                 allowFullScreen
               />
             </div>
-            <p className="text-center text-white font-semibold mt-4">{activeVideo.title}</p>
+            <p className="text-center text-white font-semibold mt-5 text-lg">{activeVideo.title}</p>
           </div>
         </div>
       )}
@@ -148,15 +156,15 @@ const TheatreDetailPage = () => {
       {/* Lightbox */}
       {lightboxImage && (
         <div
-          className="fixed inset-0 z-[70] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          className="fixed inset-0 z-[70] bg-black/95 backdrop-blur-md flex items-center justify-center p-4"
           onClick={() => setLightboxImage(null)}
         >
           <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setLightboxImage(null)}
-              className="absolute -top-12 right-0 p-2 text-gray-400 hover:text-white transition-colors"
+              className="absolute -top-14 right-0 p-2.5 rounded-full bg-zinc-800/80 text-gray-400 hover:text-white hover:bg-zinc-700 transition-all duration-300"
             >
-              <X size={24} />
+              <X size={22} />
             </button>
             <img
               src={lightboxImage}

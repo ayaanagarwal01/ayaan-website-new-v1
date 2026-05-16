@@ -18,22 +18,48 @@ body {
   color: #fafafa;
 }
 
+/* Hide Emergent branding */
+[data-emergent-watermark],
+.emergent-watermark,
+div[class*="emergent"],
+a[href*="emergent.sh"],
+a[href*="emergentagent"],
+div[style*="z-index: 2147483647"],
+div[style*="z-index: 999999"],
+#emergent-badge,
+#made-with-emergent,
+div[id*="emergent"],
+div[class*="watermark"],
+div[class*="Watermark"],
+div[class*="badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
 /* Scrollbar styles */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #18181b;
+  background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3f3f46;
-  border-radius: 4px;
+  background: #27272a;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #52525b;
+  background: #3f3f46;
 }
 
 /* Remove default link styles */
@@ -59,18 +85,8 @@ a {
   scrollbar-width: none;
 }
 
-/* Smooth animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+/* Selection color */
+::selection {
+  background: rgba(245, 158, 11, 0.25);
+  color: white;
 }

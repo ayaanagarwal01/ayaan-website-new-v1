@@ -16,6 +16,35 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  useEffect(() => {
+    // Remove any external branding/watermark badges
+    const removeWatermarks = () => {
+      const selectors = [
+        '[data-emergent-watermark]',
+        '#emergent-badge',
+        '#made-with-emergent',
+        'div[class*="watermark"]',
+        'div[class*="Watermark"]',
+      ];
+      selectors.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => el.remove());
+      });
+      // Also check for fixed-position badges at bottom-right
+      document.querySelectorAll('body > div').forEach(el => {
+        const style = window.getComputedStyle(el);
+        if (style.position === 'fixed' && style.bottom !== 'auto' && style.right !== 'auto' && style.zIndex > 999) {
+          if (el.textContent && el.textContent.toLowerCase().includes('emergent')) {
+            el.remove();
+          }
+        }
+      });
+    };
+    removeWatermarks();
+    const observer = new MutationObserver(removeWatermarks);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>

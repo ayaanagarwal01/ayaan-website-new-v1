@@ -9,36 +9,41 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
   };
 
   return (
-    <section className="relative min-h-[85vh] flex items-center bg-zinc-800 overflow-hidden">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
+    <section className="relative min-h-[92vh] flex items-center bg-zinc-800 overflow-hidden">
+      {/* Animated grain */}
+      <div className="absolute inset-0 opacity-[0.03]">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              'radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
+              'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 1px, transparent 1px)',
+            backgroundSize: '50px 50px',
           }}
         />
       </div>
 
-      {/* Gradient accent */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-zinc-900 to-transparent" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-72 h-72 bg-amber-500/5 rounded-full blur-3xl" />
+      {/* Glow orbs */}
+      <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-red-600/[0.04] rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-500/[0.04] rounded-full blur-[120px]" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      {/* Gradient bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-zinc-900 to-transparent" />
+
+      {/* Decorative line */}
+      <div className="absolute left-8 top-32 bottom-32 w-px bg-gradient-to-b from-transparent via-zinc-700/40 to-transparent hidden lg:block" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:pl-20">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-600/10 border border-red-600/20 rounded-full mb-8">
-            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            <span className="text-red-400 text-sm font-medium tracking-wide">Portfolio</span>
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/[0.04] border border-white/[0.06] rounded-full mb-10 backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
+            <span className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase">Portfolio</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-8 tracking-tight">
             {title || (
               <>
-                Welcome to{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-500">
+                Welcome to<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-red-500">
                   Ayaan&rsquo;s
                 </span>{' '}
                 Portfolio!
@@ -46,7 +51,7 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
             )}
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-400 leading-relaxed mb-10 max-w-2xl">
+          <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-12 max-w-xl">
             {subtitle ||
               'You can find all of my research projects, music & theatre performances, debates, and service activities on this website!'}
           </p>
@@ -55,9 +60,9 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
             <a
               href={ctaLink || '#contact'}
               onClick={handleCta}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-sm tracking-wider uppercase rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-red-600/25 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:shadow-[0_8px_40px_-8px_rgba(220,38,38,0.4)] hover:-translate-y-0.5"
             >
-              {ctaText || 'Join Us Now!'}
+              {ctaText || 'Get in Touch'}
             </a>
             <a
               href="#research"
@@ -65,7 +70,7 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
                 e.preventDefault();
                 document.querySelector('#research')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-2 px-8 py-4 border border-zinc-600 text-gray-300 hover:text-white hover:border-zinc-400 font-semibold text-sm tracking-wider uppercase rounded-full transition-all duration-300 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-zinc-700 text-gray-400 hover:text-white hover:border-zinc-500 font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:-translate-y-0.5"
             >
               Explore Work
             </a>
@@ -74,8 +79,11 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="text-gray-500" size={24} />
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <div className="flex flex-col items-center gap-2 animate-bounce">
+          <span className="text-[10px] text-gray-600 font-medium tracking-[0.2em] uppercase">Scroll</span>
+          <ArrowDown className="text-gray-600" size={16} />
+        </div>
       </div>
     </section>
   );
