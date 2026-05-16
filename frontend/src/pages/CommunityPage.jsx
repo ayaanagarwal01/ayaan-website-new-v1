@@ -2,26 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { socialMediaHandles } from '../data/mockData';
 import ContactFooter from '../components/ContactFooter';
-import { ArrowLeft, Users, MessageCircle, Youtube, Instagram, Linkedin, Twitter, Music2, Github, Facebook, Video, MessageSquareMore, Ghost, Camera, ExternalLink, Star, Bell } from 'lucide-react';
+import { ArrowLeft, Users, MessageCircle, Youtube, Instagram, Linkedin, Twitter, Facebook, Ghost, Camera, Bookmark, PenLine, HelpCircle, ExternalLink, Star, Bell } from 'lucide-react';
 
 const platformIcons = {
   whatsapp: MessageCircle, youtube: Youtube, instagram: Instagram, linkedin: Linkedin,
-  twitter: Twitter, spotify: Music2, github: Github, facebook: Facebook,
-  tiktok: Video, discord: MessageSquareMore, threads: Ghost, snapchat: Camera,
+  twitter: Twitter, facebook: Facebook, pinterest: Bookmark, medium: PenLine,
+  quora: HelpCircle, threads: Ghost, snapchat: Camera,
 };
 
 const iconColors = {
   whatsapp: 'text-green-400', youtube: 'text-red-400', instagram: 'text-pink-400',
-  linkedin: 'text-blue-400', twitter: 'text-sky-400', spotify: 'text-green-400',
-  github: 'text-slate-300', facebook: 'text-blue-400', tiktok: 'text-rose-400',
-  discord: 'text-indigo-400', threads: 'text-slate-300', snapchat: 'text-yellow-400',
+  linkedin: 'text-blue-400', twitter: 'text-sky-400', facebook: 'text-blue-400',
+  pinterest: 'text-red-400', medium: 'text-slate-300', quora: 'text-orange-400',
+  threads: 'text-slate-300', snapchat: 'text-yellow-400',
 };
 
 const bgColors = {
   whatsapp: 'bg-green-500/10', youtube: 'bg-red-500/10', instagram: 'bg-pink-500/10',
-  linkedin: 'bg-blue-500/10', twitter: 'bg-sky-500/10', spotify: 'bg-green-500/10',
-  github: 'bg-slate-500/10', facebook: 'bg-blue-600/10', tiktok: 'bg-rose-500/10',
-  discord: 'bg-indigo-500/10', threads: 'bg-slate-400/10', snapchat: 'bg-yellow-500/10',
+  linkedin: 'bg-blue-500/10', twitter: 'bg-sky-500/10', facebook: 'bg-blue-600/10',
+  pinterest: 'bg-red-600/10', medium: 'bg-slate-400/10', quora: 'bg-orange-500/10',
+  threads: 'bg-slate-400/10', snapchat: 'bg-yellow-500/10',
 };
 
 const CommunityPage = () => {

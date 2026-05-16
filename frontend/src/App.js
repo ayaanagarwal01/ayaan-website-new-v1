@@ -5,8 +5,8 @@ import Navbar from "./components/Navbar";
 import AnimatedBackground from "./components/AnimatedBackground";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import ResearchDetailPage from "./pages/ResearchDetailPage";
-import TheatreDetailPage from "./pages/TheatreDetailPage";
+import ResearchPage from "./pages/ResearchPage";
+import TheatrePage from "./pages/TheatrePage";
 import CommunityPage from "./pages/CommunityPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
@@ -58,8 +58,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/research/:id" element={<ResearchDetailPage />} />
-          <Route path="/theatre/:id" element={<TheatreDetailPage />} />
+          <Route path="/research" element={<ResearchPage />} />
+          <Route path="/theatre" element={<TheatrePage />} />
           <Route path="/community" element={<CommunityPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogPostPage />} />

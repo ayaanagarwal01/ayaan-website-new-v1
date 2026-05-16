@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { socialMediaHandles } from '../data/mockData';
-import { Users, MessageCircle, Youtube, Instagram, Linkedin, Twitter, Music2, Github, Facebook, Video, MessageSquareMore, Ghost, Camera, ArrowRight, ExternalLink } from 'lucide-react';
+import { Users, MessageCircle, Youtube, Instagram, Linkedin, Twitter, Facebook, Ghost, Camera, Bookmark, PenLine, HelpCircle, ArrowRight, ExternalLink } from 'lucide-react';
 
 const platformIcons = {
   whatsapp: MessageCircle,
@@ -9,11 +9,10 @@ const platformIcons = {
   instagram: Instagram,
   linkedin: Linkedin,
   twitter: Twitter,
-  spotify: Music2,
-  github: Github,
   facebook: Facebook,
-  tiktok: Video,
-  discord: MessageSquareMore,
+  pinterest: Bookmark,
+  medium: PenLine,
+  quora: HelpCircle,
   threads: Ghost,
   snapchat: Camera,
 };
@@ -24,11 +23,10 @@ const platformColors = {
   instagram: 'from-pink-500/10 to-purple-600/5 border-pink-500/10 hover:border-pink-500/30',
   linkedin: 'from-blue-500/10 to-blue-600/5 border-blue-500/10 hover:border-blue-500/30',
   twitter: 'from-sky-500/10 to-sky-600/5 border-sky-500/10 hover:border-sky-500/30',
-  spotify: 'from-green-500/10 to-emerald-600/5 border-green-500/10 hover:border-green-500/30',
-  github: 'from-slate-500/10 to-slate-600/5 border-slate-500/10 hover:border-slate-500/30',
   facebook: 'from-blue-600/10 to-blue-700/5 border-blue-600/10 hover:border-blue-600/30',
-  tiktok: 'from-rose-500/10 to-rose-600/5 border-rose-500/10 hover:border-rose-500/30',
-  discord: 'from-indigo-500/10 to-indigo-600/5 border-indigo-500/10 hover:border-indigo-500/30',
+  pinterest: 'from-red-600/10 to-red-700/5 border-red-600/10 hover:border-red-600/30',
+  medium: 'from-slate-400/10 to-slate-500/5 border-slate-400/10 hover:border-slate-400/30',
+  quora: 'from-red-500/10 to-orange-600/5 border-red-500/10 hover:border-red-500/30',
   threads: 'from-slate-400/10 to-slate-500/5 border-slate-400/10 hover:border-slate-400/30',
   snapchat: 'from-yellow-500/10 to-yellow-600/5 border-yellow-500/10 hover:border-yellow-500/30',
 };
@@ -39,11 +37,10 @@ const iconColors = {
   instagram: 'text-pink-400',
   linkedin: 'text-blue-400',
   twitter: 'text-sky-400',
-  spotify: 'text-green-400',
-  github: 'text-slate-300',
   facebook: 'text-blue-400',
-  tiktok: 'text-rose-400',
-  discord: 'text-indigo-400',
+  pinterest: 'text-red-400',
+  medium: 'text-slate-300',
+  quora: 'text-orange-400',
   threads: 'text-slate-300',
   snapchat: 'text-yellow-400',
 };

@@ -25,7 +25,7 @@ const ResearchSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {researchProjects.map((project) => (
-            <Link key={project.id} to={project.link}
+            <Link key={project.id} to="/research"
               className="group relative bg-[#0f1025]/80 rounded-2xl overflow-hidden border border-slate-800/50 hover:border-blue-500/30 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_25px_60px_-15px_rgba(59,130,246,0.15)] card-glow gradient-border">
               <div className="relative h-52 overflow-hidden">
                 <img src={project.thumbnail} alt={project.shortTitle} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />

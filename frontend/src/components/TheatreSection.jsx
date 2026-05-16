@@ -25,7 +25,7 @@ const TheatreSection = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           {theatreShows.map((show) => (
-            <Link key={show.id} to={show.link}
+            <Link key={show.id} to="/theatre"
               className="group relative rounded-2xl overflow-hidden border border-slate-800/50 hover:border-purple-500/30 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_25px_60px_-15px_rgba(168,85,247,0.15)] card-glow gradient-border">
               <div className="relative h-72 sm:h-80 lg:h-[420px] overflow-hidden">
                 <img src={show.thumbnail} alt={show.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
