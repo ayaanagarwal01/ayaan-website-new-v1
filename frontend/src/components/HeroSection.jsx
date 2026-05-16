@@ -36,7 +36,7 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/[0.04] border border-white/[0.06] rounded-full mb-10 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
-            <span className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase">Portfolio</span>
+            <span className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase">Hi</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-8 tracking-tight">
