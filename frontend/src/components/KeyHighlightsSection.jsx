@@ -132,6 +132,16 @@ const KeyHighlightsSection = () => {
             );
           })}
         </div>
+
+        {/* And much more */}
+        <div className="mt-10 flex items-center justify-center gap-4" data-testid="highlights-much-more">
+          <div className="h-px flex-1 max-w-[120px] bg-gradient-to-r from-transparent to-blue-500/30" />
+          <p className="text-sm sm:text-base text-slate-400 italic tracking-wide">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 font-bold">...and much more</span>
+            <span className="ml-2">— explore the site to see the full story.</span>
+          </p>
+          <div className="h-px flex-1 max-w-[120px] bg-gradient-to-l from-transparent to-pink-500/30" />
+        </div>
       </div>
     </section>
   );
