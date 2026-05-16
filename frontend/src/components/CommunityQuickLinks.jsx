@@ -46,6 +46,7 @@ const iconColors = {
 };
 
 const CommunityQuickLinks = () => {
+  const highlight = socialMediaHandles.find(s => s.isHighlight);
   const displayHandles = socialMediaHandles.filter(s => !s.isHighlight).slice(0, 6);
 
   return (
@@ -69,6 +70,36 @@ const CommunityQuickLinks = () => {
             View All <ArrowRight size={14} />
           </Link>
         </div>
+
+        {highlight && (
+          <a href={highlight.url} target="_blank" rel="noopener noreferrer"
+            data-testid="whatsapp-highlight-card"
+            className="group relative block mb-6 overflow-hidden rounded-3xl border border-green-500/30 bg-gradient-to-br from-green-500/15 via-emerald-500/10 to-green-600/5 p-7 sm:p-9 transition-all duration-500 hover:-translate-y-1 hover:border-green-400/60 hover:shadow-[0_20px_60px_-15px_rgba(34,197,94,0.35)] shimmer-hover">
+            <div className="absolute -top-20 -right-20 w-[280px] h-[280px] bg-green-500/15 rounded-full blur-[80px] group-hover:bg-green-400/25 transition-colors duration-700" />
+            <div className="absolute top-5 right-5 px-3 py-1 rounded-full bg-green-500/20 border border-green-500/30 backdrop-blur-sm">
+              <span className="text-[10px] font-bold tracking-[0.18em] uppercase text-green-300">Featured</span>
+            </div>
+
+            <div className="relative flex flex-col sm:flex-row items-start gap-6">
+              <div className="w-16 h-16 rounded-2xl bg-green-500/20 border border-green-500/30 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-lg shadow-green-900/30">
+                <MessageCircle size={30} className="text-green-300" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">{highlight.platform}</h3>
+                  {highlight.followers && (
+                    <span className="px-2.5 py-1 rounded-full bg-green-500/15 border border-green-500/20 text-[10px] font-bold text-green-300 tracking-wider">{highlight.followers}</span>
+                  )}
+                </div>
+                <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">{highlight.description}</p>
+                <div className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-green-300 group-hover:gap-3 transition-all duration-500">
+                  Join the Channel
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-500" />
+                </div>
+              </div>
+            </div>
+          </a>
+        )}
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {displayHandles.map((social) => {
