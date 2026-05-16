@@ -90,23 +90,14 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
               {/* Decorative border ring */}
               <div className="absolute -inset-3 rounded-[2rem] border border-white/[0.04] group-hover:border-white/[0.08] transition-colors duration-700" />
 
-              {/* Main image */}
-              <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] lg:w-[440px] lg:h-[440px] rounded-3xl overflow-hidden shadow-2xl shadow-black/40">
+              {/* Main image — full, no crop */}
+              <div className="relative w-[320px] sm:w-[400px] lg:w-[480px] rounded-3xl overflow-hidden shadow-2xl shadow-black/40">
                 <img
                   src={HERO_IMAGE}
                   alt="Ayaan Agarwal — Theatre, Music, Research, Film"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.03]"
                 />
-                {/* Subtle dark overlay at edges for blending */}
                 <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/[0.06]" />
-                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-zinc-800/60 to-transparent" />
-              </div>
-
-              {/* Floating label */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-5 py-2 bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 rounded-full shadow-lg">
-                <span className="text-[10px] font-bold text-gray-400 tracking-[0.2em] uppercase">
-                  Researcher &middot; Performer &middot; Creator
-                </span>
               </div>
             </div>
           </div>
