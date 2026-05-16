@@ -21,6 +21,8 @@ export const navItems = [
   { label: 'Music', href: '#music' },
   { label: 'Service', href: '#service' },
   { label: 'Debate', href: '#debate' },
+  { label: 'My Community', href: '/community' },
+  { label: 'Social Awareness', href: '#social-awareness' },
 ];
 
 export const servicesData = [
@@ -238,5 +240,78 @@ export const aboutData = {
     'Vocal Performance',
     'Competitive Debate',
     'Community Service',
+  ],
+};
+
+
+export const socialMediaHandles = [
+  {
+    id: 'whatsapp',
+    platform: 'WhatsApp Channel',
+    handle: 'Ayaan Agarwal',
+    url: 'https://whatsapp.com/channel/ayaanagarwal',
+    description: 'Join my WhatsApp Channel for exclusive updates on research, performances, and community initiatives. Get behind-the-scenes content and be the first to know about upcoming projects!',
+    isHighlight: true,
+    followers: '500+',
+  },
+  {
+    id: 'youtube',
+    platform: 'YouTube',
+    handle: '@AyaanAgarwal',
+    url: 'https://www.youtube.com/channel/UCjwP8d1SBJpRT_ErPbr1tJQ',
+    description: 'Watch my musical performances, research presentations, and more.',
+    isHighlight: false,
+    followers: '16',
+  },
+  {
+    id: 'instagram',
+    platform: 'Instagram',
+    handle: '@ayaan.agarwal',
+    url: 'https://instagram.com/ayaan.agarwal',
+    description: 'Behind the scenes of theatre, music, and daily life.',
+    isHighlight: false,
+    followers: '1.2K',
+  },
+  {
+    id: 'linkedin',
+    platform: 'LinkedIn',
+    handle: 'Ayaan Agarwal',
+    url: 'https://linkedin.com/in/ayaanagarwal',
+    description: 'Professional updates, research publications, and networking.',
+    isHighlight: false,
+    followers: '800+',
+  },
+  {
+    id: 'twitter',
+    platform: 'X (Twitter)',
+    handle: '@ayaan_agarwal',
+    url: 'https://x.com/ayaan_agarwal',
+    description: 'Thoughts on science, art, and everything in between.',
+    isHighlight: false,
+    followers: '350+',
+  },
+  {
+    id: 'email',
+    platform: 'Email Newsletter',
+    handle: 'ayaanagarwal209@gmail.com',
+    url: 'mailto:ayaanagarwal209@gmail.com',
+    description: 'Subscribe to receive updates directly in your inbox.',
+    isHighlight: false,
+    followers: '',
+  },
+];
+
+export const socialAwarenessData = {
+  title: 'Social Awareness',
+  subtitle: 'Storytelling for Change',
+  description: 'Ayaan is working on an animation series to create awareness on critical aspects of social issues through his storytelling, creative, and animation skills. The series aims to make complex social topics accessible and engaging for a wider audience, combining artistic expression with meaningful impact.',
+  comingSoon: 'Stay tuned for updates and to watch the series.',
+  topics: [
+    'Mental Health Awareness',
+    'Environmental Sustainability',
+    'Digital Literacy & Online Safety',
+    'Inclusivity & Diversity',
+    'Youth Empowerment',
+    'Science Communication',
   ],
 };
