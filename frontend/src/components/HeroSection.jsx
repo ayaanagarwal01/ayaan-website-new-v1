@@ -11,43 +11,44 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
   };
 
   return (
-    <section className="relative min-h-[92vh] flex items-center bg-zinc-800 overflow-hidden">
-      {/* Animated grain */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 1px, transparent 1px)',
-            backgroundSize: '50px 50px',
-          }}
-        />
+    <section className="relative min-h-screen flex flex-col justify-center bg-[#0a0a1a] overflow-hidden">
+      {/* Animated gradient mesh */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-blue-600/[0.07] rounded-full blur-[180px] animate-pulse-glow" />
+        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-600/[0.06] rounded-full blur-[150px] animate-pulse-glow" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-cyan-500/[0.04] rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: '4s' }} />
+        <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-pink-500/[0.04] rounded-full blur-[130px] animate-pulse-glow" style={{ animationDelay: '3s' }} />
       </div>
 
-      {/* Glow orbs */}
-      <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-red-600/[0.04] rounded-full blur-[150px]" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-500/[0.04] rounded-full blur-[120px]" />
+      {/* Grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: 'linear-gradient(rgba(59,130,246,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.3) 1px, transparent 1px)',
+        backgroundSize: '60px 60px',
+      }} />
+
+      {/* Floating shapes */}
+      <div className="absolute top-20 right-20 w-3 h-3 bg-blue-400/30 rounded-full animate-float" />
+      <div className="absolute top-40 left-[15%] w-2 h-2 bg-purple-400/30 rounded-full animate-float-slow" />
+      <div className="absolute bottom-40 right-[20%] w-4 h-4 bg-cyan-400/20 rounded-full animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-[60%] left-[10%] w-2 h-2 bg-pink-400/25 rounded-full animate-float-slow" style={{ animationDelay: '3s' }} />
 
       {/* Gradient bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-zinc-900 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0a0a1a] to-transparent z-10" />
 
-      {/* Decorative line */}
-      <div className="absolute left-8 top-32 bottom-32 w-px bg-gradient-to-b from-transparent via-zinc-700/40 to-transparent hidden lg:block" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-32 lg:pl-20 w-full">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          {/* Left — Text Content */}
-          <div className="flex-1 max-w-2xl">
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/[0.04] border border-white/[0.06] rounded-full mb-10 backdrop-blur-sm">
-              <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
-              <span className="text-gray-400 text-xs font-semibold tracking-[0.2em] uppercase">Hi</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-8">
+          {/* Left — Text */}
+          <div className="flex-1 max-w-xl lg:max-w-lg">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-blue-500/[0.08] border border-blue-500/[0.15] rounded-full mb-8 backdrop-blur-sm">
+              <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
+              <span className="text-blue-300 text-xs font-semibold tracking-[0.2em] uppercase">Hi</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-8 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.05] mb-6 tracking-tight">
               {title || (
                 <>
                   Welcome to<br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-red-500">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient-shift">
                     Ayaan&rsquo;s
                   </span>{' '}
                   Portfolio!
@@ -55,7 +56,7 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
               )}
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-12 max-w-xl">
+            <p className="text-base text-slate-400 leading-relaxed mb-10 max-w-md">
               {subtitle ||
                 'You can find all of my research projects, music & theatre performances, debates, and service activities on this website!'}
             </p>
@@ -64,9 +65,10 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
               <a
                 href={ctaLink || '#contact'}
                 onClick={handleCta}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:shadow-[0_8px_40px_-8px_rgba(220,38,38,0.4)] hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:shadow-[0_8px_40px_-8px_rgba(59,130,246,0.5)] hover:-translate-y-0.5 relative overflow-hidden"
               >
-                {ctaText || 'Get in Touch'}
+                <span className="relative z-10">{ctaText || 'Get in Touch'}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-shift" />
               </a>
               <a
                 href="#research"
@@ -74,30 +76,31 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
                   e.preventDefault();
                   document.querySelector('#research')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 px-8 py-4 border border-zinc-700 text-gray-400 hover:text-white hover:border-zinc-500 font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-slate-700 text-slate-400 hover:text-white hover:border-blue-500/50 font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:-translate-y-0.5"
               >
                 Explore Work
               </a>
             </div>
           </div>
 
-          {/* Right — Hero Illustration */}
-          <div className="flex-shrink-0 lg:flex-1 flex justify-center lg:justify-end relative">
+          {/* Right — BIG Hero Image */}
+          <div className="flex-1 flex justify-center lg:justify-end relative">
             {/* Glow behind image */}
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-red-500/5 to-transparent rounded-full blur-[80px] scale-90" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 via-purple-500/10 to-pink-500/10 rounded-full blur-[100px] scale-75 animate-pulse-glow" />
 
             <div className="relative group">
-              {/* Decorative border ring */}
-              <div className="absolute -inset-3 rounded-[2rem] border border-white/[0.04] group-hover:border-white/[0.08] transition-colors duration-700" />
+              {/* Animated ring */}
+              <div className="absolute -inset-4 rounded-[2.5rem] border border-blue-500/[0.08] group-hover:border-blue-500/20 transition-all duration-1000" />
+              <div className="absolute -inset-8 rounded-[3rem] border border-purple-500/[0.04] group-hover:border-purple-500/10 transition-all duration-1000" style={{ animationDelay: '0.2s' }} />
 
-              {/* Main image — full, no crop */}
-              <div className="relative w-[320px] sm:w-[400px] lg:w-[480px] rounded-3xl overflow-hidden shadow-2xl shadow-black/40">
+              {/* Main image — BIG */}
+              <div className="relative w-[340px] sm:w-[440px] lg:w-[540px] rounded-3xl overflow-hidden shadow-[0_25px_80px_-15px_rgba(59,130,246,0.2)]">
                 <img
                   src={HERO_IMAGE}
                   alt="Ayaan Agarwal — Theatre, Music, Research, Film"
-                  className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="w-full h-auto block transition-transform duration-1000 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/[0.06]" />
+                <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/[0.08]" />
               </div>
             </div>
           </div>
@@ -105,10 +108,10 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
         <div className="flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-[10px] text-gray-600 font-medium tracking-[0.2em] uppercase">Scroll</span>
-          <ArrowDown className="text-gray-600" size={16} />
+          <span className="text-[10px] text-slate-600 font-medium tracking-[0.2em] uppercase">Scroll</span>
+          <ArrowDown className="text-blue-500/50" size={16} />
         </div>
       </div>
     </section>

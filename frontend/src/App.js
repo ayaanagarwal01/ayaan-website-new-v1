@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import AnimatedBackground from "./components/AnimatedBackground";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ResearchDetailPage from "./pages/ResearchDetailPage";
@@ -49,9 +50,10 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App bg-[#0a0a1a]">
       <BrowserRouter>
         <ScrollToTop />
+        <AnimatedBackground />
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
