@@ -16,10 +16,10 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 1px, transparent 1px)',
-            backgroundSize: '50px 50px',
-          }}
-        />
+            'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }} />
+
       </div>
 
       {/* Glow orbs */}
@@ -40,28 +40,28 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-8 tracking-tight">
-            {title || (
-              <>
+            {title ||
+            <>
                 Welcome to<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-red-500">
                   Ayaan&rsquo;s
                 </span>{' '}
                 Portfolio!
               </>
-            )}
+            }
           </h1>
 
           <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-12 max-w-xl">
             {subtitle ||
-              'You can find all of my research projects, music & theatre performances, debates, and service activities on this website!'}
+            'You can find all of my research projects, music & theatre performances, debates, and service activities on this website!'}
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a
               href={ctaLink || '#contact'}
               onClick={handleCta}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:shadow-[0_8px_40px_-8px_rgba(220,38,38,0.4)] hover:-translate-y-0.5"
-            >
+              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:shadow-[0_8px_40px_-8px_rgba(220,38,38,0.4)] hover:-translate-y-0.5">
+
               {ctaText || 'Get in Touch'}
             </a>
             <a
@@ -70,8 +70,8 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
                 e.preventDefault();
                 document.querySelector('#research')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-2 px-8 py-4 border border-zinc-700 text-gray-400 hover:text-white hover:border-zinc-500 font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:-translate-y-0.5"
-            >
+              className="inline-flex items-center gap-2 px-8 py-4 border border-zinc-700 text-gray-400 hover:text-white hover:border-zinc-500 font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:-translate-y-0.5">
+
               Explore Work
             </a>
           </div>
@@ -85,8 +85,8 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
           <ArrowDown className="text-gray-600" size={16} />
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
