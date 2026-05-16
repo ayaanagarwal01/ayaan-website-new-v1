@@ -1,6 +1,5 @@
 import React from 'react';
 import { serviceActivities } from '../data/mockData';
-import SectionBanner from './SectionBanner';
 import { Heart } from 'lucide-react';
 
 const ServiceSection = () => {
@@ -22,8 +21,6 @@ const ServiceSection = () => {
           </div>
           <div className="hidden sm:block h-px flex-1 bg-gradient-to-r from-emerald-500/15 to-transparent mb-3" />
         </div>
-
-        <SectionBanner accent="emerald" caption="Service is the quietest spotlight — the one that asks nothing in return." />
 
         <div className="grid md:grid-cols-3 gap-6">
           {serviceActivities.map((activity) => (

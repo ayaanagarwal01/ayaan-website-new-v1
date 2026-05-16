@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { musicVideos } from '../data/mockData';
-import SectionBanner from './SectionBanner';
 import { Music2, ChevronLeft, ChevronRight, Play, X } from 'lucide-react';
 
 const MusicCarousel = () => {
@@ -38,8 +37,6 @@ const MusicCarousel = () => {
             </button>
           </div>
         </div>
-
-        <SectionBanner accent="pink" caption="The mic on, the lights down — singing has always been my second voice." />
 
         <div ref={scrollRef} className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory" style={{ scrollbarWidth: 'none' }}>
           {musicVideos.map((video) => (

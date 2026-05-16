@@ -39,32 +39,48 @@ const ServicesCarousel = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {servicesData.map((service, index) => {
-            const IconComp = iconMap[service.icon];
-            return (
-              <button
-                key={service.id}
-                onClick={() => handleNavClick(service.link)}
-                className={`group relative bg-gradient-to-br ${cardGradients[index]} rounded-2xl p-7 text-left overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_60px_-15px_rgba(59,130,246,0.25)] border shimmer-hover`}
-                onMouseEnter={() => setIsAutoPlaying(false)}
-                onMouseLeave={() => setIsAutoPlaying(true)}
-              >
-                <div className="absolute inset-0 opacity-[0.06]" style={{
-                  backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)',
-                  backgroundSize: '24px 24px',
-                }} />
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-xl bg-white/[0.1] backdrop-blur-sm flex items-center justify-center mb-6 group-hover:bg-white/[0.15] group-hover:scale-110 transition-all duration-500">
-                    {IconComp && <IconComp size={24} className="text-white/90" />}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-[1fr_1fr] gap-5 items-stretch">
+          {/* Left: 2x2 cards */}
+          <div className="grid grid-cols-2 gap-5">
+            {servicesData.map((service, index) => {
+              const IconComp = iconMap[service.icon];
+              return (
+                <button
+                  key={service.id}
+                  onClick={() => handleNavClick(service.link)}
+                  className={`group relative bg-gradient-to-br ${cardGradients[index]} rounded-2xl p-7 text-left overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_60px_-15px_rgba(59,130,246,0.25)] border shimmer-hover min-h-[260px]`}
+                  onMouseEnter={() => setIsAutoPlaying(false)}
+                  onMouseLeave={() => setIsAutoPlaying(true)}
+                >
+                  <div className="absolute inset-0 opacity-[0.06]" style={{
+                    backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)',
+                    backgroundSize: '24px 24px',
+                  }} />
+                  <div className="relative z-10">
+                    <div className="w-14 h-14 rounded-xl bg-white/[0.1] backdrop-blur-sm flex items-center justify-center mb-6 group-hover:bg-white/[0.15] group-hover:scale-110 transition-all duration-500">
+                      {IconComp && <IconComp size={24} className="text-white/90" />}
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 tracking-tight">{service.title}</h3>
+                    <p className="text-white/40 text-sm leading-relaxed line-clamp-3">{service.description}</p>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 tracking-tight">{service.title}</h3>
-                  <p className="text-white/40 text-sm leading-relaxed line-clamp-3">{service.description}</p>
-                </div>
-                <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-white/[0.03] rounded-full group-hover:scale-125 transition-transform duration-700" />
-              </button>
-            );
-          })}
+                  <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-white/[0.03] rounded-full group-hover:scale-125 transition-transform duration-700" />
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Right: stage image */}
+          <div
+            data-testid="services-stage-image"
+            className="relative rounded-2xl overflow-hidden border border-slate-800/60 shadow-[0_30px_80px_-25px_rgba(0,0,0,0.7)] group min-h-[260px]"
+          >
+            <img
+              src="/images/ayaan-stage.jpg"
+              alt="Ayaan on stage under purple lights"
+              className="absolute inset-0 w-full h-full object-cover object-[60%_30%] transition-transform duration-[1500ms] group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a1a]/40 via-transparent to-transparent" />
+          </div>
         </div>
 
         {/* Mobile Carousel */}
