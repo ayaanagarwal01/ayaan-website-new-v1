@@ -51,7 +51,7 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient-shift">
                     Ayaan&rsquo;s
                   </span>{' '}
-                  Portfolio!
+                  World!
                 </>
               )}
             </h1>

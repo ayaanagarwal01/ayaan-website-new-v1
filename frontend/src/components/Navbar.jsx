@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16 lg:h-[72px]">
             <Link to="/" className="flex items-center gap-3 group">
               <span className="text-lg lg:text-xl font-black tracking-[0.15em] text-white group-hover:text-blue-400 transition-colors duration-500">
-                AYAAN PORTFOLIO
+                AYAAN AGARWAL
               </span>
             </Link>
 

@@ -212,7 +212,7 @@ export const debateAchievements = [
 
 export const contactInfo = {
   email: 'ayaanagarwal209@gmail.com',
-  website: 'www.ayaanportfolio.com',
+  website: 'www.ayaan-agarwal.com',
 };
 
 export const aboutData = {

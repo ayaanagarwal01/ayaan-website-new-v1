@@ -25,14 +25,14 @@ const ContactFooter = () => {
               <div className="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/15 transition-colors duration-300">
                 <Globe size={16} className="text-purple-400" />
               </div>
-              <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Website URL</h4>
+              <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Website</h4>
             </div>
             <a href={`https://${contactInfo.website}`} target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-400 transition-colors duration-500 text-base font-medium">{contactInfo.website}</a>
           </div>
         </div>
 
         <div className="border-t border-slate-800/50 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-slate-600 text-xs tracking-wide">&copy; {new Date().getFullYear()} Ayaan Portfolio. All rights reserved.</p>
+          <p className="text-slate-600 text-xs tracking-wide">&copy; {new Date().getFullYear()} Ayaan Agarwal. All rights reserved.</p>
           <button onClick={scrollToTop}
             className="p-2.5 rounded-full bg-slate-900 border border-slate-800 text-slate-500 hover:text-white hover:bg-blue-500/20 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-0.5">
             <ArrowUp size={16} />
