@@ -50,7 +50,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App bg-[#0a0a1a]">
+    <div className="App bg-[#0a0a1a] overflow-x-clip">
       <BrowserRouter>
         <ScrollToTop />
         <AnimatedBackground />
