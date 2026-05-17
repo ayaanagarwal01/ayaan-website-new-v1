@@ -61,9 +61,9 @@ const Navbar = () => {
           : 'bg-[#0a0a1a]/50 backdrop-blur-md'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-[72px]">
-            <Link to="/" className="flex items-center gap-3 group">
-              <span className="text-lg lg:text-xl font-black tracking-[0.15em] text-white group-hover:text-blue-400 transition-colors duration-500">
+          <div className="flex items-center justify-between h-16 lg:h-[72px] gap-3">
+            <Link to="/" className="flex items-center gap-3 group min-w-0 flex-shrink">
+              <span className="text-base sm:text-lg lg:text-xl font-black tracking-[0.12em] sm:tracking-[0.15em] text-white group-hover:text-blue-400 transition-colors duration-500 whitespace-nowrap truncate">
                 AYAAN AGARWAL
               </span>
             </Link>
@@ -109,8 +109,8 @@ const Navbar = () => {
               ))}
             </div>
 
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-2 text-slate-400 hover:text-white transition-colors">
-              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} data-testid="mobile-menu-toggle" aria-label="Toggle menu" className="lg:hidden flex-shrink-0 p-2 -mr-2 text-slate-300 hover:text-white transition-colors relative z-10">
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
