@@ -370,14 +370,7 @@ export const socialMediaHandles = [
 export const socialImpactData = {
   title: 'Social Impact',
   subtitle: 'Storytelling for Change',
-  description: 'Ayaan is working on an animation series to create awareness on critical aspects of social issues through his storytelling, creative, and animation skills. The series aims to make complex social topics accessible and engaging for a wider audience, combining artistic expression with meaningful impact.',
-  comingSoon: 'Stay tuned for updates and to watch the series.',
-  topics: [
-    'Mental Health Awareness',
-    'Environmental Sustainability',
-    'Digital Literacy & Online Safety',
-    'Inclusivity & Diversity',
-    'Youth Empowerment',
-    'Science Communication',
-  ],
+  description: 'He is working on creating social impact by creating animation series spreading social awareness. One such project he is working on currently is Tuberculosis awareness in collaboration with Doctors For You.',
+  comingSoon: 'Stay tuned to watch the series.',
+  topics: [],
 };

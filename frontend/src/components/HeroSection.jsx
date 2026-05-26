@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowDown, Microscope, Drama, Trophy, HeartHandshake } from 'lucide-react';
 
 const HERO_IMAGE = '/images/ayaan-stage.jpg';
@@ -18,13 +17,7 @@ const accentByColor = {
   green: { bg: 'bg-green-500/10', text: 'text-green-300', border: 'border-green-500/20', ring: 'group-hover:border-green-400/40' },
 };
 
-const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
-  const handleCta = (e) => {
-    e.preventDefault();
-    const el = document.querySelector('#contact');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
+const HeroSection = ({ title, subtitle }) => {
   return (
     <section className="relative min-h-screen flex flex-col justify-center bg-[#0a0a1a] overflow-hidden">
       {/* Animated gradient mesh */}
@@ -74,25 +67,6 @@ const HeroSection = ({ title, subtitle, ctaText, ctaLink }) => {
               {subtitle ||
                 'You can find all of my research projects, music & theatre performances, debates, and service activities on this website!'}
             </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href={ctaLink || '#contact'}
-                onClick={handleCta}
-                data-testid="hero-cta-contact"
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:shadow-[0_8px_40px_-8px_rgba(59,130,246,0.5)] hover:-translate-y-0.5 relative overflow-hidden"
-              >
-                <span className="relative z-10">{ctaText || 'Get in Touch'}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-shift" />
-              </a>
-              <Link
-                to="/research"
-                data-testid="hero-cta-explore"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-slate-700 text-slate-400 hover:text-white hover:border-blue-500/50 font-bold text-xs tracking-[0.15em] uppercase rounded-full transition-all duration-500 hover:-translate-y-0.5"
-              >
-                Explore Work
-              </Link>
-            </div>
           </div>
 
           {/* Right — Stage image */}
