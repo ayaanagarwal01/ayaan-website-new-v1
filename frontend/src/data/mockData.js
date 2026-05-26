@@ -229,14 +229,38 @@ export const contactInfo = {
 
 export const aboutData = {
   name: 'Ayaan Agarwal',
-  bio: "I'm a passionate student with diverse interests spanning research, music, theatre, debate, and community service. Based in Mumbai, India, I'm driven by curiosity and a desire to make meaningful contributions across multiple disciplines.",
+  location: 'Mumbai, India',
+  tagline: 'Researcher · Performer · Debater · Science Communicator',
+  intro: "Hi! My name is Ayaan Agarwal, and I'm based in Mumbai, India. If I had to summarise the things I'm passionate about, I'd stick to my love for research in the biological sciences, music (and musical theatre!), debate, and democratising information through scientific communication.",
+  paragraphs: [
+    {
+      heading: 'Research',
+      body: "I fell in love with biology early on — the Covid pandemic and the science behind mRNA vaccines left a deep mark on me. Since then, I've pursued research in both bioinformatics and microbiology, exploring fascinating topics like immunology and antibiotic resistance. My work is rooted in a desire to ultimately help create treatments for persistent disease.",
+    },
+    {
+      heading: 'Music',
+      body: "As an avid singer, I've tried my hand at many a genre — rock, pop, recent or dated — both as a solo performer and with my band.",
+    },
+    {
+      heading: 'Theatre',
+      body: "After being enchanted by Hamilton on Broadway, I became a veritable 'theatre kid' — and have since taken on the male lead role in two productions.",
+    },
+    {
+      heading: 'Debate',
+      body: "I've been involved in competitive debating for quite a while, participating in multiple tournaments and experimenting with many formats — from parliamentary to World Schools.",
+    },
+    {
+      heading: 'Science Communication',
+      body: "Lastly, I believe science is no good if it can't be understood and applied — which is why I firmly stand by simplifying complex topics into easy-to-understand mediums relevant to their target audiences.",
+    },
+  ],
   interests: [
     'Computational Biology',
     'Microbiology Research',
     'Musical Theatre',
     'Vocal Performance',
     'Competitive Debate',
-    'Community Service',
+    'Science Communication',
   ],
 };
 
