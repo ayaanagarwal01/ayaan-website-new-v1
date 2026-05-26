@@ -9,19 +9,6 @@ const ServiceSection = () => {
       <div className="absolute bottom-40 right-10 w-[300px] h-[300px] bg-emerald-500/[0.04] rounded-full blur-[100px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end gap-4 mb-16">
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-                <Heart size={18} className="text-emerald-400" />
-              </div>
-              <span className="text-xs font-semibold text-slate-500 tracking-[0.2em] uppercase">Community</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight">Service</h2>
-          </div>
-          <div className="hidden sm:block h-px flex-1 bg-gradient-to-r from-emerald-500/15 to-transparent mb-3" />
-        </div>
-
         <div className="grid md:grid-cols-3 gap-6">
           {serviceActivities.map((activity) => (
             <div key={activity.id}

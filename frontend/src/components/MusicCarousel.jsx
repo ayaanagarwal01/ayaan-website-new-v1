@@ -18,25 +18,14 @@ const MusicCarousel = () => {
       <div className="absolute top-20 right-20 w-[300px] h-[300px] bg-pink-500/[0.04] rounded-full blur-[100px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-16">
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-9 h-9 rounded-lg bg-pink-500/10 flex items-center justify-center">
-                <Music2 size={18} className="text-pink-400" />
-              </div>
-              <span className="text-xs font-semibold text-slate-500 tracking-[0.2em] uppercase">Live Performances</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight">Music</h2>
-          </div>
-          <div className="hidden sm:flex gap-2">
-            <button onClick={() => scroll('left')} className="p-2.5 rounded-full bg-slate-800/80 border border-slate-700/40 text-slate-500 hover:text-white hover:bg-pink-500/20 hover:border-pink-500/30 transition-all duration-300">
+        <div className="hidden sm:flex justify-end gap-2 mb-8">
+            <button onClick={() => scroll('left')} aria-label="Previous" className="p-2.5 rounded-full bg-slate-800/80 border border-slate-700/40 text-slate-500 hover:text-white hover:bg-pink-500/20 hover:border-pink-500/30 transition-all duration-300">
               <ChevronLeft size={18} />
             </button>
-            <button onClick={() => scroll('right')} className="p-2.5 rounded-full bg-slate-800/80 border border-slate-700/40 text-slate-500 hover:text-white hover:bg-pink-500/20 hover:border-pink-500/30 transition-all duration-300">
+            <button onClick={() => scroll('right')} aria-label="Next" className="p-2.5 rounded-full bg-slate-800/80 border border-slate-700/40 text-slate-500 hover:text-white hover:bg-pink-500/20 hover:border-pink-500/30 transition-all duration-300">
               <ChevronRight size={18} />
             </button>
           </div>
-        </div>
 
         <div ref={scrollRef} className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory" style={{ scrollbarWidth: 'none' }}>
           {musicVideos.map((video) => (
