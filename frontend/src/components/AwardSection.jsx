@@ -39,7 +39,7 @@ const AwardSection = () => {
               data-testid="award-title"
               className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.1] tracking-tight"
             >
-              Awarded the{' '}
+              Awarded the<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-300 to-amber-300 animate-gradient-shift">
                 National Humanitarian Excellence Award 2026
               </span>
@@ -49,7 +49,8 @@ const AwardSection = () => {
               data-testid="award-subtitle"
               className="mt-5 text-sm sm:text-base text-slate-400 leading-relaxed max-w-lg"
             >
-              Awarded by the <span className="text-white font-semibold">ICAN Foundation</span> under the category of{' '}
+              Awarded by the <span className="text-white font-semibold">ICAN Foundation</span> under the category of
+              <br />
               <span className="text-white font-semibold">&ldquo;Digital Transformation In Social Work&rdquo;</span>.
             </p>
           </div>
